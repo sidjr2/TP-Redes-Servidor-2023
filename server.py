@@ -13,7 +13,7 @@ def serve_directory(client_socket, directory):
             if os.path.isfile(file_path):
                 file_extension = os.path.splitext(file_path)[1].lower()
 
-                if file_extension in ['.c', '.cpp', '.java', '.py', '.rb', '.js', '.txt']:
+                if file_extension in ['.c', '.cpp', '.java', '.py', '.rb', '.js', '.txt','.gif']:
                     file_link = f"<a href='view/{urllib.parse.quote(file)}' target='_blank'>{file}</a>"
                     file_list += f"<li class='file code'><i class='fas fa-file-code'></i>{file_link}  <a href='download/{urllib.parse.quote(file)}'><i class='fas fa-download'></i></a> </li>"
                 elif file_extension in ['.mp3', '.mp4', '.mkv']:
